@@ -18,3 +18,7 @@ int[] naturals(Range range) {
     }
     return array;
 }
+
+String cut(String words, Range range) {
+
+}
