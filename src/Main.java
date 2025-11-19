@@ -8,6 +8,8 @@ void main() {
     IO.println(Arrays.toString(nats));
     String cut = cut("Bela string!", new Range(4,10));
     IO.println(cut);
+    Range f = findFirst("sei", "só sei que nada sei");
+    f.print();
 }
 
 int[] naturals(Range range) {
@@ -35,4 +37,12 @@ String cut(String toCut, Range range) {
     newString += toCut.substring(range.max() + 1);
 
     return newString;
+}
+
+Range findFirst(String search, String text) {
+    int index = text.indexOf(search);
+    if (index == -1){
+        return null;
+    }
+    return new Range(index, index + search.length() - 1);
 }
