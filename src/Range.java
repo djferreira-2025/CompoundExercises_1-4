@@ -1,10 +1,10 @@
-public record Range(int min, int max){
+public record Range(int min, int max) {
     boolean isEmpty() {
         return min > max;
     }
 
     int length() {
-        if (isEmpty()){
+        if (isEmpty()) {
             return 0;
         }
         return max - min + 1;
@@ -12,7 +12,7 @@ public record Range(int min, int max){
 
     void print() {
         for (int i = min; i <= max; i++) {
-            if (i != max){
+            if (i != max) {
                 IO.print(i + " ");
             } else {
                 IO.println(i);
@@ -21,8 +21,8 @@ public record Range(int min, int max){
     }
 
     void printReverse() {
-        for (int i = max; i >= min ; i--) {
-            if (i != min){
+        for (int i = max; i >= min; i--) {
+            if (i != min) {
                 IO.print(i + " ");
             } else {
                 IO.println(i);
